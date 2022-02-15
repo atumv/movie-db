@@ -1,3 +1,3 @@
 # Movie Db
 
-![example](/public/example.png)
+![example](/assets/preview.png)
