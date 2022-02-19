@@ -1,15 +1,12 @@
-import React, { useRef, useEffect } from "react";
-import randomMovie from "../utils/randomMovie";
+import React, { useRef, useEffect } from 'react';
+import { randomMovie } from '../shared/utils/randomMovie';
 
-const SearchForm = ({ getMovies, setSearchBtnRef }) => {
-  const searchInputRef = useRef();
+export const SearchForm = ({ getMovies, setSearchBtnRef }) => {
   const searchBtnRef = useRef();
 
   useEffect(() => {
     setSearchBtnRef(searchBtnRef);
   }, []);
-
-  useEffect(() => searchInputRef.current.focus());
 
   return (
     <form className="search-form" onSubmit={getMovies}>
@@ -18,7 +15,7 @@ const SearchForm = ({ getMovies, setSearchBtnRef }) => {
         type="text"
         name="query"
         placeholder={`Например, «${randomMovie()}»`}
-        ref={searchInputRef}
+        autoFocus
       />
       <button className="search-btn" type="submit" ref={searchBtnRef}>
         Найти
@@ -26,5 +23,3 @@ const SearchForm = ({ getMovies, setSearchBtnRef }) => {
     </form>
   );
 };
-
-export default SearchForm;

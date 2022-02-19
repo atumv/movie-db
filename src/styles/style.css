@@ -6,8 +6,12 @@
   border: 0;
   box-sizing: border-box;
 
-  font-family: "Fira Sans", "Poppins", "Noto Sans", "Open Sans", "Arial",
+  font-family: 'Fira Sans', 'Poppins', 'Noto Sans', 'Open Sans', 'Arial',
     sans-serif;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 body {

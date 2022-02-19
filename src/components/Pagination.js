@@ -1,8 +1,14 @@
-import React from "react";
+import React from 'react';
 
-const Pagination = ({ setPage, setMovies, searchBtnRef, totalPages, page }) => {
-  const changePage = (e, page) => {
-    e.preventDefault();
+export const Pagination = ({
+  setPage,
+  setMovies,
+  searchBtnRef,
+  totalPages,
+  page,
+}) => {
+  const changePage = (event, page) => {
+    event.preventDefault();
     setPage(page);
     setMovies([]);
     setTimeout(() => searchBtnRef.current.click());
@@ -16,11 +22,15 @@ const Pagination = ({ setPage, setMovies, searchBtnRef, totalPages, page }) => {
         <a
           className={
             page == i
-              ? "pagination-link pagination-link-active"
-              : "pagination-link pagination-link-passive"
+              ? 'pagination-link pagination-link-active'
+              : 'pagination-link pagination-link-passive'
           }
           href="#"
-          onClick={page == i ? e => e.preventDefault() : e => changePage(e, i)}
+          onClick={
+            page == i
+              ? (event) => event.preventDefault()
+              : (event) => changePage(event, i)
+          }
         >
           {i}
         </a>
@@ -30,5 +40,3 @@ const Pagination = ({ setPage, setMovies, searchBtnRef, totalPages, page }) => {
 
   return <ul className="pagination">{pageLinks}</ul>;
 };
-
-export default Pagination;

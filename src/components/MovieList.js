@@ -1,17 +1,15 @@
-import React from "react";
-import dateConverter from "../utils/dateConverter";
+import React from 'react';
+import { dateConverter } from '../shared/utils/dateConverter';
 
-const MovieList = ({ movies }) => (
+export const MovieList = ({ movies }) => (
   <div className="movie-list">
     {movies
-      .filter(movie => movie.poster_path)
-      .map(movie => (
+      .filter((movie) => movie.poster_path)
+      .map((movie) => (
         <div className="card" key={movie.id}>
           <img
             className="card-image"
-            src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${
-              movie.poster_path
-            }`}
+            src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
             alt={`${movie.title} poster`}
           />
           <div className="card-content">
@@ -26,5 +24,3 @@ const MovieList = ({ movies }) => (
       ))}
   </div>
 );
-
-export default MovieList;
