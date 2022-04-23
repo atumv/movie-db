@@ -42,6 +42,11 @@ body {
   color: #f2f2f2;
 }
 
+.header-clapper {
+  width: 30px;
+  height: auto;
+}
+
 .search-form {
   display: grid;
   grid-template-columns: auto 8rem;
