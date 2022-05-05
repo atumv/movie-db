@@ -7,7 +7,7 @@ Movie database app built using [The Movie Database API](https://www.themoviedb.o
 ## Install
 
 ```sh
-git clone https://github.com/atumv/movie-db.git && npm i
+git clone https://github.com/atumv/movie-db.git && cd movie-db && npm i
 ```
 
 ## Start
